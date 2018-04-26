@@ -1,0 +1,370 @@
+/**
+ * Faceless
+ * by @itskodinger on itsform.me
+ *
+ * Get in touch:
+ * @itskodinger (Facebook, Instagram and GitHub)
+ */
+
+html, 
+body, 
+.if,
+.if .if-wrapper {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+.if {
+	/* variables */
+	--color-primary: #0081C6;
+	--color-grey: #f9f9f9;
+	--color-dark: #000;
+	--color-semidark: #9b9b9b;
+	--color-shadow: rgba(0, 129, 198, .45);
+
+	font-family: 'Segoe UI';
+	font-size: 14px;
+	display: table;
+	width: 100%;
+}
+
+.if.if-red {
+	--color-primary: #ff6464;
+	--color-grey: #f9f9f9;
+	--color-dark: rgba(255, 100, 100, .8);
+	--color-semidark: #9b9b9b;
+	--color-shadow: rgba(255, 100, 100, .55);
+}
+
+.if.if-green {
+	--color-primary: #45EBA5;
+	--color-grey: #f9f9f9;
+	--color-dark: rgba(69, 235, 165, 1);
+	--color-semidark: #9b9b9b;
+	--color-shadow: rgba(69, 235, 165, .6);
+}
+
+.if.if-purple {
+	--color-primary: #6C567B;
+	--color-grey: rgba(108, 86, 123, .08);
+	--color-dark: rgba(108, 86, 123, .7);
+	--color-semidark: rgba(108, 86, 123, .45);
+	--color-shadow: rgba(108, 86, 123, .45);
+}
+
+.if a {
+	color: var(--color-primary);
+	text-decoration: none;
+	border-bottom: 1px solid var(--color-semidark);
+	margin-top: -3px;
+	padding-bottom: 2px;
+}
+
+.if * {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.if .if-brand {
+	overflow: hidden;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	-webkit-box-shadow: 0 4px 40px rgba(0, 0, 0, .07);
+	        box-shadow: 0 4px 40px rgba(0, 0, 0, .07);
+	padding: 10px;
+	background-color: #fff;
+	z-index: 1;
+	position: relative;
+}
+
+.if .if-brand img {
+	width: 100%;
+}
+
+.if .if-panel,
+.if .if-main {
+	display: table-cell;
+	vertical-align: top;
+}
+
+.if .if-panel {
+	width: 450px;
+	background-color: #fff;
+}
+
+.if .if-panel .if-panel-inner {
+	padding: 50px;
+}
+
+.if .if-panel .if-text {
+	margin-top: 60px;
+}
+
+.if .if-panel .if-text h1 {
+	font-weight: normal;
+}
+
+.if .if-panel .if-text p {
+	color: var(--color-semidark);
+	line-height: 24px;
+}
+
+.if .if-main {
+	position: relative;
+	background-image: url('background.jpg');
+	background-size: cover;
+	background-position: 0 0%;
+	animation-name: backgroundWalk;
+	animation-duration: 60s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+}
+
+@keyframes backgroundWalk {
+	0% { background-position: 0 0%; }
+	100% { background-position: 0 100%; }
+}
+
+.if .if-main:after {
+	content: ' ';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(
+	    to bottom,
+	    rgba(0, 0, 0, .65) 0%,
+	    rgba(0, 0, 0, 0) 25%,
+	    rgba(0, 0, 0, 0) 75%,
+	    rgba(0, 0, 0, .65) 100%
+	);
+}
+
+.if .if-main .if-text-foot {
+	position: absolute;
+	bottom: 20px;
+	left: 40px;
+	color: rgba(255, 255, 255, .7);
+	z-index: 1;
+}
+
+.if .if-main .if-text-foot a {
+	color: #fff;
+	border-bottom-style: solid;
+}
+
+.if .if-main .if-nav {
+	margin: 0;
+	padding: 40px;
+	z-index: 1;
+	position: relative;
+}
+
+.if .if-main .if-nav li a {
+	color: rgba(255, 255, 255, .7);
+	font-weight: 500;
+	letter-spacing: 1.5px;
+	margin-right: 30px;
+}
+
+.if .if-main .if-nav li.active a,
+.if .if-main .if-nav li a:hover {
+	color: #fff;
+}
+
+.if .if-nav {
+	margin-bottom: 20px;
+	display: inline-block;
+	width: 100%;
+}
+
+.if .if-nav ul {
+	padding: 0;
+	margin: 0;
+}
+
+.if .if-nav ul li {
+	float: left;
+	display: block;
+}
+
+.if .if-nav ul li a {
+	display: block;
+	margin-right: 15px;
+	border: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 1px;
+	font-size: 12px;
+	color: var(--color-semidark);
+	position: relative;
+	padding-bottom: 6px;
+	transition: all .5s;
+}
+
+.if .if-nav ul li a:after {
+	content: ' ';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: var(--color-primary);
+	transition: all .5s;
+}
+
+.if .if-nav ul li a:hover,
+.if .if-nav ul li.active a {
+	color: var(--color-dark);
+}
+
+.if .if-nav ul li.active a:after,
+.if .if-nav ul li a:hover:after {
+	width: 100%;
+}
+
+.if .if-form {
+	margin-top: 20px;
+	display: inline-block;
+	width: 100%;
+	transition: all .5s;
+}
+
+.if .if-forms {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow: hidden;
+	align-items: flex-start;
+}
+
+.if .if-forms form {
+	flex: 0 0 100%;
+	transition: all .5s;
+	margin-right: 20px;
+}
+
+.if .if-form.if-form-progress {
+	position: relative;
+}
+
+.if .if-form.if-form-progress:before {
+	content: 'Please Wait';
+	position: absolute;
+	top: 52%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: 600;
+}
+
+.if .if-form.if-form-progress:after {
+	content: ' ';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, .5);
+	background-image: url('loading.svg');
+	background-repeat: no-repeat;
+	background-position: 50% 35%;
+	background-size: 80px;
+}
+
+.if .if-group {
+	margin-bottom: 30px;
+}
+
+.if label {
+	margin-bottom: 5px;
+	display: inline-block;
+	width: 100%;
+	color: var(--color-semidark);
+	font-weight: 600;
+}
+
+.if label a {
+	float: right;
+}
+
+.if .if-input {
+	background-color: var(--color-grey);
+	color: var(--color-dark);
+	border: none;
+	border-radius: 3px;
+	padding: 15px 20px;
+	width: 100%;
+	outline: 0;
+}
+
+.if .if-btn {
+	display: inline-block;
+	width: 100%;
+	border: none;
+	color: #fff;
+	padding: 15px;
+	border-radius: 3px;
+	background-color: var(--color-primary);
+	-webkit-box-shadow: 0 2px 7px var(--color-shadow);
+	        box-shadow: 0 2px 7px var(--color-shadow);
+	font-weight: 700;
+	outline: 0;
+	cursor: pointer;
+	-webkit-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+}
+
+.if .if-btn:active {
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+}
+
+.if .if-btn:hover {
+	opacity: .9;
+}
+
+.if .if-text-foot {
+	text-align: center;
+	padding: 10px;
+	font-weight: 600;
+	color: var(--color-semidark);
+	font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+	.if .if-panel,
+	.if .if-main {
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.if {
+		display: inline-block;
+		width: 100%;
+	}
+
+	.if .if-panel,
+	.if .if-main {
+		display: inline-block;
+		width: 100%;
+	}
+
+	.if .if-main {
+		height: 600px;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.if .if-panel .if-panel-inner {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
