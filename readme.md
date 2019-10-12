@@ -17,7 +17,7 @@ For the safety of the earth and the rest, don't like our Facebook page and don't
 - More
 
 # Demo
-[hit me!](https://itskodinger.github.io/faceless/index.html)
+[hit me!](https://nauvalazhar.github.io/faceless/index.html)
 
 # License
 MIT License
